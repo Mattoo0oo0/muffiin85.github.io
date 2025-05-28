@@ -19,24 +19,20 @@
       font-size: 2.2em;
       color: white;
       text-decoration: none;
-      
     }
     img.logo {
-      width: 500px; /* You can change this size if needed */
+      width: 500px;
       border-radius: 1em;
       margin-bottom: 1em;
-      
     }
     .extra-text {
       font-size: 1.5em;
       margin-top: 0.5em;
-
     }
     h2.photos-title {
       margin-top: 3em;
       font-size: 2em;
       text-decoration: underline;
-      
     }
     img.extra {
       width: 500px;
@@ -46,14 +42,22 @@
   </style>
 </head>
 <body>
-  <img src="https://i.imgur.com/1ejDxzc.png" class="logo">
+  <!-- Header image that changes after 5 seconds -->
+  <img id="headerImage" src="https://i.imgur.com/lw1wTMi.gif" class="logo" alt="Header GIF">
+
   <a href="https://www.youtube.com/@Muffiin85">Youtube</a>
   <a href="https://discordapp.com/users/1036288542462185632">Discord</a>
   
-   <!-- Photos section -->
+  <!-- Photos section -->
   <h2 class="photos-title">Minecraft skin!</h2>
   <img src="https://i.imgur.com/HgeUqsq.gif" alt="New image" class="extra">
   <p class="extra-text">More stuff coming soon!</p>
-  
+
+  <!-- Script to switch GIF to static image after 5 seconds -->
+  <script>
+    setTimeout(() => {
+      document.getElementById("headerImage").src = "https://i.imgur.com/1ejDxzc.png";
+    }, 5000);
+  </script>
 </body>
 </html>
