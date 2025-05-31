@@ -7,10 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
   <style>
     body {
-      
-      <button id="darkModeToggle">🌙</button>
   
-  {   font-family: 'Lexend', sans-serif;
+      font-family: 'Lexend', sans-serif;
       text-align: center;
       margin-top: 5em;
       background-color: #9ddcf4;
@@ -21,31 +19,6 @@
   width: 100%;
   margin-top: 2em;
 }
-
-      #darkModeToggle {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  background-color: transparent;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode a {
-  color: #90caf9;
-}
-
-body.dark-mode .extra-text {
-  color: #cfcfcf;
-}
-    
     a {
       display: block;
       margin: 1em 0;
@@ -107,22 +80,6 @@ body.dark-mode .extra-text {
   </iframe>
 
       <p class="extra-text">More stuff coming soon!</p>
-
-  <script>
-  const toggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-
-  // Load preference
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-  }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
-  });
-</script>
   
 </body>
 </html>
